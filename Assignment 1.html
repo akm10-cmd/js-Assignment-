@@ -1,0 +1,78 @@
+<!-- Question 1 --------------------
+ What will the code below output to the console and why ?
+
+console.log(1 + "2" + "2");
+ans-> 122
+Explanation: 1 is treated as a integer, "2" & "2" treated as string so + operator perform concatination not addition.
+
+console.log(1 + +"2" + "2");
+ans-> 32
+Explanation: 1 is treated as an integer, +"2" became 2 so, 1 + +"2" = 3
+and "2" treated as string so + operator perform concatination not addition.
+
+console.log(1 + -"1" + "2");
+ans-> 02
+Explanation: 1 is treated as an integer, -"1" became -1 so, 1 + -"1" = 0
+and "2" treated as string so + operator perform concatination not addition.
+
+console.log(+"1" + "1" + "2");
+ans-> 112
+Explanation: +"1" beacame 1,treated as an integer, "1" & "2" treated as string so + operator perform concatination not addition.
+
+console.log( "A" - "B" + "2");
+ans-> NaN2
+Explanation: we can use only + operator on string, so "A" - "B" is not valid and it gives NaN and after that we concat other string(it is also not valid)then we get NaN2.
+
+console.log( "A" - "B" + 2);
+ans-> NaN
+Explanation: we can use only + operator on string, so "A" - "B" is not valid and it gives NaN and after that we add 2 and we get NaN.
+
+-------------------------------------------------------------->
+
+<!---Question2--->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Question2</title>
+	<script>
+	  var marks = prompt("Enter marks:")
+	  if(marks>90 && marks<=100)
+	  {
+	  	console.log("AA");
+	  }
+	  else if(marks>80 && marks<=90)
+	  {
+	  	console.log("AB");
+	  }
+	  else if(marks>70 && marks<=80)
+	  {
+	  	console.log("BB");
+	  }
+	  else if(marks>60 && marks<= 70)
+	  {
+	  	console.log("BC");
+	  }
+	  else if(marks>50 && marks<= 60)
+	  {
+	  	console.log("CC");
+	  }
+	  else if(marks>40 && marks<= 50)
+	  {
+	  	console.log("CD");
+	  }
+	  else if(marks>30 && marks<= 40)
+	  {
+	  	console.log("DD");
+	  }
+	  else if(marks<=30 && marks>=0)
+	  {
+	  	console.log("FF");
+	  }
+	  else
+	  {
+	  	console.log("opps!! marks should be in range 0 to 100.");
+	  }
+	</script>
+</head>
+</html>
