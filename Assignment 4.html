@@ -1,0 +1,40 @@
+<!---------   Question 1  ---------------	
+By how many ways we can access elements in the DOM and write about them in brief?
+
+document.getElementsByClassName(className)
+document.getElementsByTagName(tagName)
+document.getElementById(id)
+document.querySelector(cssSelector)
+document.querySelectorAll(cssSelector)
+
+The methods 'getElementsByClassName' and 'getElementsByTagName' return an 'HTMLCollection object' that acts like an array. That collection is "live", which means the collection is updated if additional elements with tag name or class name are added to the document.
+
+'getElementById' and 'querySelector' returns a single element object.
+
+'querySelectorAll' returns a NodeList, which also acts like an array. That list is "static", which means that the list won't update even if new matching elements are added to the page.
+
+----------->
+
+<!-------Question 2-----
+Write a javascript program that will take 2 numbers from the HTML page and display them on the HTML page after the addition of those 2 numbers.
+--->
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		function addition()
+		{
+	        num1 = parseInt(document.getElementById("firstNo").value);
+	        num2 = parseInt(document.getElementById("secondNo").value);
+	        document.getElementById("result").value= num1 + num2;
+		}
+	</script>
+</head>
+<body>
+	Enter 1st Number : <input type="text" id="firstNo" /><br>
+	Enter 2nd Number : <input type="text" id="secondNo" /><br>
+	<input type="button" onClick="addition()" Value="Add" />
+	<input type="text" id="result">
+</body>
+</html>
